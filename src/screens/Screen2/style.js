@@ -3,16 +3,16 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
   main: {
     flex: 1,
+    backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    paddingTop: 16,
   },
-  btnContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+  separator: {
+    height: 8,
   },
-  btn: {
-    width: '25%',
-    borderRadius: 5,
+  listStyle: {
+    paddingBottom: 12,
+    paddingHorizontal: 10,
   },
 });

@@ -2,10 +2,16 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import {styles} from './style';
 
-function Home() {
+function Home({navigation}) {
   return (
     <View style={styles.main}>
-      <Text>Home</Text>
+      <Text
+        style={{color: 'black'}}
+        onPress={() => {
+          navigation.navigate('GreatDesign');
+        }}>
+        Home
+      </Text>
     </View>
   );
 }

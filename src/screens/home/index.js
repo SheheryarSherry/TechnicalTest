@@ -1,17 +1,37 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import Button from '../../Components/Button';
 import {styles} from './style';
+import {DESIGN, SCREEN1, SCREEN2} from '../../constants/navigation';
 
-function Home({navigation}) {
+function Home() {
+  const navigation = useNavigation();
   return (
     <View style={styles.main}>
-      <Text
-        style={{color: 'black'}}
-        onPress={() => {
-          navigation.navigate('GreatDesign');
-        }}>
-        Home
-      </Text>
+      <View style={styles.btnContainer}>
+        <Button
+          title={'PublicApi'}
+          btnStyle={styles.btn}
+          onPress={() => {
+            navigation.navigate(SCREEN1);
+          }}
+        />
+        <Button
+          title={'Redux'}
+          btnStyle={styles.btn}
+          onPress={() => {
+            navigation.navigate(SCREEN2);
+          }}
+        />
+        <Button
+          title={'Design'}
+          btnStyle={styles.btn}
+          onPress={() => {
+            navigation.navigate(DESIGN);
+          }}
+        />
+      </View>
     </View>
   );
 }
